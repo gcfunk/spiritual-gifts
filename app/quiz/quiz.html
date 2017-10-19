@@ -1,4 +1,5 @@
 <div ng-controller="QuizCtrl as quiz">
   <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
-  <p ng-repeat="question in quiz.quizData.questions">{{question.question}}</p>
+  <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>
+  <a href ng-click="quiz.nextQuestion()">Next</a>
 </div>

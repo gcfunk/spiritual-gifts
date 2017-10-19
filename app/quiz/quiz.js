@@ -11,8 +11,9 @@ angular.module('myApp.quiz', ['ngRoute'])
 
 .controller('QuizCtrl', ['quizData', function(quizData) {
   var self = this;
-
-  console.log(quizData);
-
   self.quizData = quizData;
+
+  self.nextQuestion = function() {
+    self.quizData.currentQuestion += 1;
+  };
 }]);
