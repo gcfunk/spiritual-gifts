@@ -1,1 +1,4 @@
-<p>Question 1/20</p>
+<div ng-controller="QuizCtrl as quiz">
+  <p>Question 1/20</p>
+  <p ng-repeat="question in quiz.quizData.questions">{{question.question}}</p>
+</div>
