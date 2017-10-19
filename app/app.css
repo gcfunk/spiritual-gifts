@@ -1,1 +1,10 @@
 /* app css stylesheet */
+
+.answers {
+  display: flex;
+}
+
+.answers > * {
+  flex: 1 1 0;
+  padding: 20px;
+}

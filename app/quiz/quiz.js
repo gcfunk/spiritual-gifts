@@ -13,7 +13,7 @@ angular.module('myApp.quiz', ['ngRoute'])
   var self = this;
   self.quizData = quizData;
 
-  self.nextQuestion = function() {
+  self.nextQuestion = function(answer) {
     self.quizData.currentQuestion += 1;
   };
 }]);
