@@ -1,3 +1,25 @@
+# Spiritual Gifts Test app
+
+Based on angular-seed - readme preserved below.
+
+## Getting Started
+
+```
+git clone git@github.com:gcfunk/spiritual-gifts.git
+cd spiritual-gifts
+npm install
+```
+
+### Run the Application
+
+```
+npm start
+```
+
+Now browse to the app at [`localhost:8000/index.html`][local-app-url].
+
+---
+
 # `angular-seed` — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS][angularjs] web app. You can use it
