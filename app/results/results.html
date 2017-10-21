@@ -1,6 +1,6 @@
 <div ng-controller="ResultsCtrl as results">
   <p>Results</p>
-  <div ng-repeat="gift in results.quizData.gifts">
+  <div ng-repeat="gift in results.quizData.gifts | orderBy : 'score' : true">
     <h2>{{gift.name}}</h2>
     <p>Score: {{gift.score}}</p>
   </div>
