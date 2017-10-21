@@ -18,6 +18,14 @@ npm start
 
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 
+## Deploy to heroku
+
+Create new app on heroku and follow their instructions to set up git remote.
+
+````
+git push heroku master
+````
+
 ---
 
 # `angular-seed` — the seed for AngularJS apps
