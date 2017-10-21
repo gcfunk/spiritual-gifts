@@ -1,6 +1,6 @@
 <div ng-controller="QuizCtrl as quiz">
-  <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
   <div ng-if="!quiz.isDone()">
+    <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
     <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>
       <div class="answers">
         <a href ng-click="quiz.nextQuestion(0)">Doesn't fit me at all</a>

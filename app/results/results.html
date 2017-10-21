@@ -1,4 +1,7 @@
 <div ng-controller="ResultsCtrl as results">
   <p>Results</p>
-  {{results.quizData}}
+  <div ng-repeat="gift in results.quizData.gifts">
+    <h2>{{gift.name}}</h2>
+    <p>Score: {{gift.score}}</p>
+  </div>
 </div>
