@@ -1,10 +1,17 @@
 <div ng-controller="QuizCtrl as quiz">
   <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
-  <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>
-  <div class="answers">
-    <a href ng-click="quiz.nextQuestion(0)">Doesn't fit me at all</a>
-    <a href ng-click="quiz.nextQuestion(1)">Fits me somewhat</a>
-    <a href ng-click="quiz.nextQuestion(2)">Fits me most of the time</a>
-    <a href ng-click="quiz.nextQuestion(3)">Fits me exactly - I enjoy this</a>
+  <div ng-if="!quiz.isDone()">
+    <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>
+      <div class="answers">
+        <a href ng-click="quiz.nextQuestion(0)">Doesn't fit me at all</a>
+        <a href ng-click="quiz.nextQuestion(1)">Fits me somewhat</a>
+        <a href ng-click="quiz.nextQuestion(2)">Fits me most of the time</a>
+        <a href ng-click="quiz.nextQuestion(3)">Fits me exactly - I enjoy this</a>
+      </div>
+    </p>
+  </div>
+  <div ng-if="quiz.isDone()">
+    <p>Done!</p>
+    <a href="#!/results">See Results</a>
   </div>
 </div>

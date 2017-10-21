@@ -16,9 +16,9 @@ angular.module('myApp.quiz', ['ngRoute'])
   self.nextQuestion = function(answer) {
     self.quizData.questions[self.quizData.currentQuestion].userAnswer = answer;
     self.quizData.currentQuestion += 1;
+  };
 
-    if (self.quizData.currentQuestion >= self.quizData.questions.length) {
-      $location.path('/results');
-    }
+  self.isDone = function() {
+    return self.quizData.currentQuestion >= self.quizData.questions.length;
   };
 }]);
