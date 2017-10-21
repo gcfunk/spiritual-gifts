@@ -9,11 +9,16 @@ angular.module('myApp.quiz', ['ngRoute'])
   });
 }])
 
-.controller('QuizCtrl', ['quizData', function(quizData) {
+.controller('QuizCtrl', ['quizData', '$location', function(quizData, $location) {
   var self = this;
   self.quizData = quizData;
 
   self.nextQuestion = function(answer) {
+    self.quizData.questions[self.quizData.currentQuestion].userAnswer = answer;
     self.quizData.currentQuestion += 1;
+
+    if (self.quizData.currentQuestion >= self.quizData.questions.length) {
+      $location.path('/results');
+    }
   };
 }]);
