@@ -10,23 +10,23 @@ factory('quizData', function(){
   quizData.questions = [
     {
       question: 'I work well under pressure and get to the heart of a matter and take decisive action',
-      giftId: 0
+      giftId: 1
     },
     {
       question: 'Other people seem to have confidence in my ability to tell when something or someone is right or wrong',
-      giftId: 0
+      giftId: 2
     },
     {
       question: 'I would rather deal with someone having problems personally instead of sending them to someone else',
-      giftId: 0
+      giftId: 3
     },
     {
       question: 'I receive great satisfaction in sharing Christ freely and effectively with unbelieving persons',
-      giftId: 0
+      giftId: 4
     },
     {
       question: 'I have known God\'s will with certainty in a specific situation even when concrete evidence was missing',
-      giftId: 0
+      giftId: 5
     }
   ];
 
