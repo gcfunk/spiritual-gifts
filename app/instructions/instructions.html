@@ -1,31 +1,5 @@
 <div ng-controller="InstructionsCtrl as instructions">
   <h1>Spritual Gifts Assessment Test</h1>
   <a class="btn btn-lg btn-primary" href="#!/quiz">Start Assessment Test</a>
-  <p class="panel-heading expand-all text-right">
-    <a
-      href
-      ng-attr-aria-expanded="{{instructions.allExpanded}}"
-      ng-click="instructions.toggleExpandAll()">
-      {{instructions.allExpanded ? 'Collapse' : 'Expand'}} All
-    </a>
-  </p>
-  <div class="panel panel-default" ng-repeat="gift in instructions.quizData.gifts | orderBy : 'name'">
-    <div class="panel-heading">
-      <h2 class="panel-title">
-        <a
-          href
-          data-toggle="collapse"
-          data-target="#details-{{gift.name}}"
-          aria-expanded="true">
-          {{gift.name}}
-        </a>
-      </h2>
-      <p>{{gift.description}}</p>
-    </div>
-    <div
-      id="details-{{gift.name}}"
-      class="panel-collapse collapse in"
-      ng-include="'gift_partials/' + gift.name.toLowerCase() + '.html'">
-    </div>
-  </div>
+  <gifts></gifts>
 </div>
