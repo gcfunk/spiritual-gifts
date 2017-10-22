@@ -8,6 +8,8 @@ angular.module('myApp.instructions', ['ngRoute'])
   });
 }])
 
-.controller('InstructionsCtrl', [function() {
+.controller('InstructionsCtrl', ['quizData', function(quizData) {
+  var self = this;
+  self.quizData = quizData;
 
 }]);
