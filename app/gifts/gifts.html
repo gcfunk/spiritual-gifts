@@ -1,12 +1,12 @@
-<div ng-controller="GiftsCtrl as gifts">
-  <p class="panel-heading expand-all text-right">
+<div>
+  <div class="panel-heading expand-all text-right">
     <a
       href
       ng-attr-aria-expanded="{{gifts.allExpanded}}"
       ng-click="gifts.toggleExpandAll()">
       {{gifts.allExpanded ? 'Collapse' : 'Expand'}} All
     </a>
-  </p>
+  </div>
   <div class="panel panel-default" ng-repeat="gift in gifts.quizData.gifts | orderBy : 'name'">
     <div class="panel-heading">
       <h2 class="panel-title">
@@ -16,6 +16,7 @@
           data-target="#details-{{gift.name}}"
           aria-expanded="true">
           {{gift.name}}
+          <span ng-if="gifts.showScore" class="score">Score: {{gift.score | number : 0}}%</span>
         </a>
       </h2>
       <p>{{gift.description}}</p>

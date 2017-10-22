@@ -2,11 +2,13 @@
 
 angular.module('myApp.gifts', [])
 
-.controller('GiftsCtrl', ['quizData', function(quizData) {
+.controller('GiftsCtrl', ['quizData', '$scope', function(quizData, $scope) {
   var self = this;
   self.quizData = quizData;
 
-  self.allExpanded = true;
+  // these values are passed in as strings, because javascript is dumb
+  self.allExpanded = ($scope.expanded === 'true');
+  self.showScore = ($scope.score === 'true');
 
   self.toggleExpandAll = function() {
     self.allExpanded = !self.allExpanded;
@@ -16,8 +18,18 @@ angular.module('myApp.gifts', [])
 }])
 
 .directive('gifts', function() {
-    return {
-        controller: 'GiftsCtrl',
-        templateUrl: '/gifts/gifts.html'
-    };
+  return {
+    scope: {
+      expanded: '@',
+      score: '@'
+    },
+    link: function ($scope, element, attributes) {
+      $scope.expanded = attributes.expanded;
+      $scope.score = attributes.score;
+    },
+
+    controller: 'GiftsCtrl',
+    controllerAs: 'gifts',
+    templateUrl: '/gifts/gifts.html'
+  };
 });

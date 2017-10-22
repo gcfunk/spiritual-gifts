@@ -6,9 +6,4 @@ angular.module('myApp.instructions', ['ngRoute'])
   $routeProvider.when('/instructions', {
     templateUrl: 'instructions/instructions.html'
   });
-}])
-
-.controller('InstructionsCtrl', ['quizData', function(quizData) {
-  var self = this;
-  self.quizData = quizData;
 }]);
