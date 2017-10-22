@@ -7,6 +7,8 @@ factory('quizData', function(){
 
   quizData.currentQuestion = 0;
 
+  quizData.highestScore = 18; // 3 per question, 6 questions per gift
+
   quizData.questions = [
     {
       question: 'I work well under pressure and get to the heart of a matter and take decisive action',

@@ -1,7 +1,8 @@
 <div ng-controller="ResultsCtrl as results">
-  <p>Results</p>
+  <h1>Here are your results</h1>
+  <p>Take a minute to explore your spirtual gifts.</p>
   <div ng-repeat="gift in results.quizData.gifts | orderBy : 'score' : true">
     <h2>{{gift.name}}</h2>
-    <p>Score: {{gift.score}}</p>
+    <p>Score: {{gift.score | number : 0}}%</p>
   </div>
 </div>

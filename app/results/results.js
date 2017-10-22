@@ -24,5 +24,8 @@ angular.module('myApp.results', ['ngRoute'])
     angular.forEach(questions, function(question) {
       gift.score += question.userAnswer ? question.userAnswer : 0;
     });
+
+    // show score as a percent
+    gift.score = gift.score / self.quizData.highestScore * 100;
   });
 }]);
