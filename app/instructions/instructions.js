@@ -12,4 +12,16 @@ angular.module('myApp.instructions', ['ngRoute'])
   var self = this;
   self.quizData = quizData;
 
+  self.allExpanded = true;
+
+  self.expandAll = function() {
+    self.allExpanded = true;
+    $('.collapse').collapse('show');
+  };
+
+  self.collapseAll = function() {
+    self.allExpanded = false;
+    $('.collapse').collapse('hide');
+  };
+
 }]);
