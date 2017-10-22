@@ -1,14 +1,14 @@
 <div ng-controller="InstructionsCtrl as instructions">
   <h1>Spritual Gifts Assessment Test</h1>
   <a class="btn btn-lg btn-primary" href="#!/quiz">Start Assessment Test</a>
-  <h2 class="panel-heading">
+  <p class="panel-heading expand-all text-right">
     <a
       href
       ng-attr-aria-expanded="{{instructions.allExpanded}}"
       ng-click="instructions.toggleExpandAll()">
       {{instructions.allExpanded ? 'Collapse' : 'Expand'}} All
     </a>
-  </h2>
+  </p>
   <div class="panel panel-default" ng-repeat="gift in instructions.quizData.gifts | orderBy : 'name'">
     <div class="panel-heading">
       <h2 class="panel-title">

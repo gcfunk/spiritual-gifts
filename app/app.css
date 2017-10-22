@@ -24,6 +24,11 @@
   font-weight: 500;
 }
 
+.expand-all a {
+  color: black;
+  margin-right: 15px;
+}
+
 h2.panel-title {
   font-size: 30px;
 }
