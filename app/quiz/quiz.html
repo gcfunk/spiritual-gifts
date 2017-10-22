@@ -1,4 +1,15 @@
 <div ng-controller="QuizCtrl as quiz">
+  <div class="progress">
+    <div
+      class="progress-bar"
+      role="progressbar"
+      ng-attr-aria-valuenow="{{quiz.percentComplete()}}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      ng-style="{'width':quiz.percentComplete() + '%'}"
+      <span class="sr-only">{{quiz.percentComplete()}}% Complete</span>
+    </div>
+  </div>
   <div ng-if="!quiz.isDone()">
     <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
     <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>

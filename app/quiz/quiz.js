@@ -20,4 +20,8 @@ angular.module('myApp.quiz', ['ngRoute'])
   self.isDone = function() {
     return self.quizData.currentQuestion >= self.quizData.questions.length;
   };
+
+  self.percentComplete = function() {
+    return self.isDone() ? 100 : Math.round(self.quizData.currentQuestion / self.quizData.questions.length * 100);
+  };
 }]);
