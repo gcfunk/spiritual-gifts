@@ -7,7 +7,7 @@
       {{gifts.allExpanded ? 'Collapse' : 'Expand'}} All
     </a>
   </div>
-  <div class="panel panel-default" ng-repeat="gift in gifts.quizData.gifts | orderBy : 'name'">
+  <div class="panel panel-default" ng-repeat="gift in gifts.quizData.gifts | orderBy : gifts.sort : gifts.reverse">
     <div class="panel-heading">
       <h2 class="panel-title">
         <a

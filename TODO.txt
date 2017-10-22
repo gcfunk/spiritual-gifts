@@ -1,4 +1,4 @@
-sort gifts properly depending on which page it's on
+
 back button during quiz doesn't work
 save/load data from cookies
 styles

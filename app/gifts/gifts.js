@@ -9,6 +9,8 @@ angular.module('myApp.gifts', [])
   // these values are passed in as strings, because javascript is dumb
   self.allExpanded = ($scope.expanded === 'true');
   self.showScore = ($scope.score === 'true');
+  self.sort = $scope.sort;
+  self.reverse = ($scope.reverse === 'true');
 
   // for expanding or collapsing the panels on load
   self.initialExpandAll = self.allExpanded;
@@ -24,11 +26,15 @@ angular.module('myApp.gifts', [])
   return {
     scope: {
       expanded: '@',
-      score: '@'
+      score: '@',
+      sort: '@',
+      reverse: '@'
     },
     link: function ($scope, element, attributes) {
       $scope.expanded = attributes.expanded;
       $scope.score = attributes.score;
+      $scope.sort = attributes.sort;
+      $scope.reverse = attributes.reverse;
     },
 
     controller: 'GiftsCtrl',
