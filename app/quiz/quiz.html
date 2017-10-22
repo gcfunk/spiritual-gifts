@@ -3,15 +3,15 @@
     <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
     <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>
       <div class="answers">
-        <a href ng-click="quiz.nextQuestion(0)">Doesn't fit me at all</a>
-        <a href ng-click="quiz.nextQuestion(1)">Fits me somewhat</a>
-        <a href ng-click="quiz.nextQuestion(2)">Fits me most of the time</a>
-        <a href ng-click="quiz.nextQuestion(3)">Fits me exactly - I enjoy this</a>
+        <a class="btn btn-lg btn-danger" href ng-click="quiz.nextQuestion(0)">Doesn't fit me at all</a>
+        <a class="btn btn-lg btn-warning" href ng-click="quiz.nextQuestion(1)">Fits me somewhat</a>
+        <a class="btn btn-lg btn-info" href ng-click="quiz.nextQuestion(2)">Fits me most of the time</a>
+        <a class="btn btn-lg btn-success" href ng-click="quiz.nextQuestion(3)">Fits me exactly - I enjoy this</a>
       </div>
     </p>
   </div>
   <div ng-if="quiz.isDone()">
     <h1>All Done!</h1>
-    <a href="#!/results">See Results</a>
+    <a class="btn btn-lg btn-primary" href="#!/results">See Results</a>
   </div>
 </div>
