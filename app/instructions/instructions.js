@@ -14,14 +14,9 @@ angular.module('myApp.instructions', ['ngRoute'])
 
   self.allExpanded = true;
 
-  self.expandAll = function() {
-    self.allExpanded = true;
-    $('.collapse').collapse('show');
-  };
-
-  self.collapseAll = function() {
-    self.allExpanded = false;
-    $('.collapse').collapse('hide');
+  self.toggleExpandAll = function() {
+    self.allExpanded = !self.allExpanded;
+    self.allExpanded ? $('.collapse').collapse('show') : $('.collapse').collapse('hide');
   };
 
 }]);
