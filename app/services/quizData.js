@@ -36,7 +36,7 @@ factory('quizData', function(){
     {
       id: 1,
       name: 'Administration',
-      description: ''
+      description: 'The ability to guide human activities in such a way that Christ\'s program is carried out (1 Corinthians 12:28)'
     },
     {
       id: 2,

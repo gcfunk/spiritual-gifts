@@ -2,7 +2,8 @@
   <h1>Here are your results</h1>
   <p>Take a minute to explore your spirtual gifts.</p>
   <div ng-repeat="gift in results.quizData.gifts | orderBy : 'score' : true">
-    <h2>{{gift.name}}</h2>
-    <p>Score: {{gift.score | number : 0}}%</p>
+    <h2>{{gift.name}}<span class="score">Score: {{gift.score | number : 0}}%</span></h2>
+    <p>{{gift.description}}</p>
+    <div ng-include="'gift_partials/' + gift.name.toLowerCase() + '.html'"></div>
   </div>
 </div>
