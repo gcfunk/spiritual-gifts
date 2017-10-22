@@ -2,12 +2,13 @@
 
 .answers {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .answers > * {
-  flex: 1 1 0;
   margin: 20px;
   white-space: initial;
+  width: calc(50% - 40px); // 2 across
 }
 
 .score {
