@@ -10,6 +10,9 @@ angular.module('myApp.gifts', [])
   self.allExpanded = ($scope.expanded === 'true');
   self.showScore = ($scope.score === 'true');
 
+  // for expanding or collapsing the panels on load
+  self.initialExpandAll = self.allExpanded;
+
   self.toggleExpandAll = function() {
     self.allExpanded = !self.allExpanded;
     self.allExpanded ? $('.collapse').collapse('show') : $('.collapse').collapse('hide');

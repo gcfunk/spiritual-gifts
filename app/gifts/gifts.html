@@ -23,7 +23,8 @@
     </div>
     <div
       id="details-{{gift.name}}"
-      class="panel-collapse collapse in"
+      class="panel-collapse collapse"
+      ng-class="{ 'in': gifts.initialExpandAll, 'out': !gifts.initialExpandAll }"
       ng-include="'gift_partials/' + gift.name.toLowerCase() + '.html'">
     </div>
   </div>
