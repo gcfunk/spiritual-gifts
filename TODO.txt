@@ -1,4 +1,3 @@
-change page titles
 back button during quiz doesn't work
 save/load data from cookies
 styles
