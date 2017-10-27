@@ -1,28 +1,26 @@
-<div ng-controller="QuizCtrl as quiz">
-  <div class="progress">
-    <div
-      class="progress-bar"
-      role="progressbar"
-      ng-attr-aria-valuenow="{{quiz.percentComplete()}}"
-      aria-valuemin="0"
-      aria-valuemax="100"
-      ng-style="{'width':quiz.percentComplete() + '%'}"
-      <span class="sr-only">{{quiz.percentComplete()}}% Complete</span>
+<div class="progress">
+  <div
+    class="progress-bar"
+    role="progressbar"
+    ng-attr-aria-valuenow="{{$ctrl.percentComplete()}}"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    ng-style="{'width':$ctrl.percentComplete() + '%'}"
+    <span class="sr-only">{{$ctrl.percentComplete()}}% Complete</span>
+  </div>
+</div>
+<div ng-if="!$ctrl.isDone()">
+  <p>Question {{$ctrl.quizData.currentQuestion + 1}}/{{$ctrl.quizData.questions.length}}</p>
+  <p>{{$ctrl.quizData.questions[$ctrl.quizData.currentQuestion].question}}</p>
+    <div class="answers">
+      <a class="btn btn-lg btn-danger" href ng-click="$ctrl.nextQuestion(0)">Doesn't fit me at all</a>
+      <a class="btn btn-lg btn-warning" href ng-click="$ctrl.nextQuestion(1)">Fits me somewhat</a>
+      <a class="btn btn-lg btn-info" href ng-click="$ctrl.nextQuestion(2)">Fits me most of the time</a>
+      <a class="btn btn-lg btn-success" href ng-click="$ctrl.nextQuestion(3)">Fits me exactly - I enjoy this</a>
     </div>
-  </div>
-  <div ng-if="!quiz.isDone()">
-    <p>Question {{quiz.quizData.currentQuestion + 1}}/{{quiz.quizData.questions.length}}</p>
-    <p>{{quiz.quizData.questions[quiz.quizData.currentQuestion].question}}</p>
-      <div class="answers">
-        <a class="btn btn-lg btn-danger" href ng-click="quiz.nextQuestion(0)">Doesn't fit me at all</a>
-        <a class="btn btn-lg btn-warning" href ng-click="quiz.nextQuestion(1)">Fits me somewhat</a>
-        <a class="btn btn-lg btn-info" href ng-click="quiz.nextQuestion(2)">Fits me most of the time</a>
-        <a class="btn btn-lg btn-success" href ng-click="quiz.nextQuestion(3)">Fits me exactly - I enjoy this</a>
-      </div>
-    </p>
-  </div>
-  <div ng-if="quiz.isDone()">
-    <h1>All Done!</h1>
-    <a class="btn btn-lg btn-primary" href="#!/results">See Results</a>
-  </div>
+  </p>
+</div>
+<div ng-if="$ctrl.isDone()">
+  <h1>All Done!</h1>
+  <a class="btn btn-lg btn-primary" href="#!/results">See Results</a>
 </div>

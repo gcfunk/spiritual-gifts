@@ -38,7 +38,7 @@ angular.module('myApp.gifts', [])
     },
 
     controller: 'GiftsCtrl',
-    controllerAs: 'gifts',
+    controllerAs: '$ctrl',
     templateUrl: '/gifts/gifts.html'
   };
 });

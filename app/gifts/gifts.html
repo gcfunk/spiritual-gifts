@@ -2,12 +2,12 @@
   <div class="panel-heading expand-all text-right">
     <a
       href
-      ng-attr-aria-expanded="{{gifts.allExpanded}}"
-      ng-click="gifts.toggleExpandAll()">
-      {{gifts.allExpanded ? 'Collapse' : 'Expand'}} All
+      ng-attr-aria-expanded="{{$ctrl.allExpanded}}"
+      ng-click="$ctrl.toggleExpandAll()">
+      {{$ctrl.allExpanded ? 'Collapse' : 'Expand'}} All
     </a>
   </div>
-  <div class="panel panel-default" ng-repeat="gift in gifts.quizData.gifts | orderBy : gifts.sort : gifts.reverse">
+  <div class="panel panel-default" ng-repeat="gift in $ctrl.quizData.gifts | orderBy : $ctrl.sort : $ctrl.reverse">
     <div class="panel-heading">
       <h2 class="panel-title">
         <a
@@ -16,7 +16,7 @@
           data-target="#details-{{gift.name}}"
           aria-expanded="true">
           {{gift.name}}
-          <span ng-if="gifts.showScore" class="score">Score: {{gift.score | number : 0}}%</span>
+          <span ng-if="$ctrl.showScore" class="score">Score: {{gift.score | number : 0}}%</span>
         </a>
       </h2>
       <p>{{gift.description}}</p>
@@ -24,7 +24,7 @@
     <div
       id="details-{{gift.name}}"
       class="panel-collapse collapse"
-      ng-class="{ 'in': gifts.initialExpandAll, 'out': !gifts.initialExpandAll }"
+      ng-class="{ 'in': $ctrl.initialExpandAll, 'out': !$ctrl.initialExpandAll }"
       ng-include="'gift_partials/' + gift.name.toLowerCase() + '.html'">
     </div>
   </div>
