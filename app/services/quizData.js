@@ -381,72 +381,72 @@ factory('quizData', function(){
     {
       id: 2,
       name: 'Discernment',
-      description: ''
+      description: 'The ability to distinguish between truth and error, to know when a person or an act is of God (1 Corinthians 12:10).'
     },
     {
       id: 3,
       name: 'Encouragement',
-      description: ''
+      description: 'the ability to motivate people, through encouraging words, to live practical Christian lives (Romans 12:8)'
     },
     {
       id: 4,
       name: 'Evangelism',
-      description: ''
+      description: 'The ability to present the Gospel to unbelievers in such a clear and meaningful way that people respond and become members of the Body of Christ (Ephesians 4:11)'
     },
     {
       id: 5,
       name: 'Faith',
-      description: ''
+      description: 'The ability to envision what god wants to happen and to be certain He is going to make it happen in response to prayer, even when there is no concrete evidence available (I Corinthians 12:9)'
     },
     {
       id: 6,
       name: 'Giving',
-      description: ''
+      description: 'The ability to support the Lord\'s work materially with generous, timely and cheerful contributions (Romans 12:8)'
     },
     {
       id: 7,
       name: 'Helping',
-      description: ''
+      description: 'The ability to see the needs of others and to respond willingly to meet those needs (1 Corinthians 12:28)'
     },
     {
       id: 8,
       name: 'Knowledge',
-      description: ''
+      description: 'The ability to grasp the truth about God\'s Word in order to bring it into focus in a contemporary world (1 Corinthians 12:8)'
     },
     {
       id: 9,
       name: 'Leadership',
-      description: ''
+      description: 'The ability to envision God\'s purpose and plan for the future and set goals which will inspire others to work together to accomplish those goals for the glory of God (Romans 12:8)'
     },
     {
       id: 10,
       name: 'Mercy',
-      description: ''
+      description: 'The ability to empathize with hurting people and to translate compassion into cheerful acts of service (Romans 12:8)'
     },
     {
       id: 11,
       name: 'Prophecy',
-      description: ''
+      description: 'The ability to proclaim and apply God\'s truth so that believers may be edified, encouraged and consoled and non-believers convinced (1 Corinthians 12:10, 28)'
     },
     {
       id: 12,
       name: 'Service',
-      description: ''
+      description: 'The ability to serve with others in their ministries by aiding them in practical ways enabling them to be more effective in their work for the glory of God (Romans 12:7)'
     },
     {
       id: 13,
       name: 'Shepherding',
-      description: ''
+      description: 'The ability to oversee the spiritual lives of others and care for their spiritual needs by teaching and guiding them toward maturity (Ephesians 4:11)'
     },
     {
       id: 14,
       name: 'Teaching',
-      description: ''
+      description: 'The ability to communicate knowledge to others for the purpose of building up the Body of Christ (Ephesians 4:11)'
     },
     {
       id: 15,
       name: 'Wisdom',
-      description: ''
+      description: 'The ability to regulate one\'s relationship with God by being able to apply God\'s truth to an immediate problem or need and help others do the same (1 Corinthians 12:8)'
     }
   ];
 

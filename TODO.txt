@@ -2,7 +2,6 @@ back button during quiz doesn't work
 save/load data from cookies
 styles
 import the rest of the gift details in gift_partials/*
-import the rest of the questions
 Niki proofread all text
 Talk to Josh about where it will live
 Talk to GPS class leaders about their needs
